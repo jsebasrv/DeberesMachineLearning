@@ -1,4 +1,0 @@
-Perltidy version is 20211029
-
-<stdin>: Begin Error Output Stream
-253: already saw definition of 'sub find_indexes' in package 'main' at line 227
