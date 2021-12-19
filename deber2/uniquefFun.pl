@@ -3,14 +3,14 @@ use warnings;
 use Switch;
 use Data::Dump qw(dump);
 # Array para el caso cuando es vacío
-my @array_vacio = ();
+my $array_ref_empty = ();
 
 #unique(@array_vacio);
 print "\n";
 
 #Caso cuando ingreso un array 1D
-my @array_1D = ( [5, 2, 1, 8, 1, 2] ); 
-my @array_2D = ([[5, 2, 1,2],[8, 1, 2,3],[5, 2, 1,5]],[[8, 1, 2,8],[5, 2, 1,7],[8, 1, 2,6]],[[5, 2, 1,4],[8, 1, 2,4],[5, 2, 1,2]]);
+my $array_ref = ( [5, 2, 1, 8, 1, 2] ); 
+my $array_ref_2D = ([[5, 2, 1,2],[8, 1, 2,3],[5, 2, 1,5]],[[8, 1, 2,8],[5, 2, 1,7],[8, 1, 2,6]],[[5, 2, 1,4],[8, 1, 2,4],[5, 2, 1,2]]);
 my $indices  = "index=true";
 my $contador = "count=true";
 my $inverse = "inverse=true";
@@ -20,45 +20,45 @@ my $inverse = "inverse=true";
 
 #casos con un parámetro
 print "Imprimo El array original \n";
-print dump (@array_1D),"\n";
+print dump ($array_ref),"\n";
 print "\n";
 
 #casos con un parámetro
 print "Imprimo Array unique \n";
-print dump (unique(@array_2D)),"\n";
+print dump (unique($array_ref_2D)),"\n";
 print "\n";
 
 #casos con un parámetro
 print "Imprimo Array unique con parámetro indexes \n";
-print unique(@array_1D,$indices);
+print unique($array_ref,$indices);
 print "\n";
 print "Imprimo Array unique con parámetro count \n";
-print unique(@array_1D,$contador);
+print unique($array_ref,$contador);
 print "\n";
 print "Imprimo Array unique con parámetro inverse\n";
-print unique(@array_1D,$inverse);
+print unique($array_ref,$inverse);
 print "\n";
 
 #casos con dos parámetro
 print "Imprimo Array unique con dos parámetro \n";
-print unique(@array_1D,$indices,$contador);
+print unique($array_ref,$indices,$contador);
 print "\n";
 print "Imprimo Array unique con dos parámetro \n";
-print unique(@array_1D,$contador,$indices);
+print unique($array_ref,$contador,$indices);
 print "\n";
 print "Imprimo Array unique con dos parámetro \n";
-print unique(@array_1D,$contador,$inverse);
+print unique($array_ref,$contador,$inverse);
 print "\n";
 
 #casos con tres parámetro
 print "Imprimo Array unique con tres parámetros \n";
-print unique(@array_1D,$indices,$contador,$inverse);
+print unique($array_ref,$indices,$contador,$inverse);
 print "\n";
 print "Imprimo Array unique con tres parámetros \n";
-print unique(@array_1D,$contador,$indices,$inverse);
+print unique($array_ref,$contador,$indices,$inverse);
 print "\n";
 print "Imprimo Array unique con tres parámetros \n";
-print unique(@array_1D,$contador,$indices,$inverse);
+print unique($array_ref,$contador,$indices,$inverse);
 print "\n";
 
 
